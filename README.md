@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌿 agentcloudkelp
+# 🌿 Agent Cloudkelp
 
 **Your agent works in the demo. Ship it, and it meets the real world.**
 
@@ -14,9 +14,9 @@ Fault injection · behavioral snapshots · cost gates · zero Python test code r
 
 ---
 
-## 30-second pitch
+## My 30-Second Pitch
 
-agentcloudkelp is a CLI that stress-tests your AI agent using YAML contracts. You describe what your agent *should do* — which tools it calls, what it says, how it handles failures — and kelp runs your agent through every scenario, breaks things on purpose, tracks every dollar spent, and tells you exactly what went wrong.
+Agent Cloudkelp is a CLI that stress-tests your AI agent using YAML contracts. You describe what your agent *should do* — which tools it calls, what it says, how it handles failures — and kelp runs your agent through every scenario, breaks things on purpose, tracks every dollar spent, and tells you exactly what went wrong.
 
 ```bash
 pip install agentcloudkelp
@@ -412,4 +412,4 @@ Add new adapters in `src/agentcloudkelp/adapters/`, new fault types in `src/agen
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Read the License File
