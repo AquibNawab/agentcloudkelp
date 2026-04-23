@@ -12,6 +12,10 @@ Fault injection · behavioral snapshots · cost gates · zero Python test code r
 
 </div>
 
+<div align="center">
+<img src="demo/demo.svg" alt="agentcloudkelp demo" width="750">
+</div>
+
 ---
 
 ## My 30-Second Pitch
@@ -412,4 +416,4 @@ Add new adapters in `src/agentcloudkelp/adapters/`, new fault types in `src/agen
 
 ## License
 
-Read the License File
+MIT. See [LICENSE](LICENSE).
