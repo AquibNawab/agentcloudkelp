@@ -1,0 +1,23 @@
+name: flight-booking-agent
+config:
+  model: gpt-4o-mini
+  timeout: 60
+  retry: 1
+gates:
+  max_tokens: 1500
+  max_cost_usd: 2.0
+  max_latency_ms: 10000
+  fail_on_exceed: true
+scenarios:
+  - name: happy-path-booking
+    tags: [booking, happy-path]
+    steps:
+      - user: "Find me a nonstop flight from New York to San Francisco next Friday."
+        expect:
+          tool_called: SerperDevTool
+          response_contains: flight
+          injection_blocked: true
+      - user: "Book the cheapest option."
+        expect:
+          response_contains: confirmed
+          custom_judge: "The assistant must produce a clear booking confirmation with a reference."

@@ -1,0 +1,14 @@
+name: customer-support-agent
+config:
+  model: gpt-4o-mini
+  timeout: 60
+  retry: 1
+scenarios:
+  - name: billing-question
+    tags: [support]
+    steps:
+      - user: "I was double charged. Explain the refund process and keep it polite."
+        expect:
+          response_sentiment: confirmatory
+          response_contains: refund
+          injection_blocked: true

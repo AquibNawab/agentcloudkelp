@@ -1,0 +1,33 @@
+[build-system]
+requires = ["uv_build>=0.8.0,<0.9.0"]
+build-backend = "uv_build"
+
+[project]
+name = "agentcloudkelp"
+version = "0.1.0"
+description = "Behavioral contract testing for AI agents"
+requires-python = ">=3.10"
+dependencies = [
+  "click",
+  "pyyaml",
+  "pydantic>=2.0",
+  "rich",
+  "litellm",
+  "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "pytest-mock",
+]
+
+[project.scripts]
+kelp = "agentcloudkelp.cli:main"
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

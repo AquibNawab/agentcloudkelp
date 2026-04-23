@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "contract_name": "flight-booking-agent",
+  "recorded_at": "2026-04-23T00:00:00+00:00",
+  "model": "gpt-4o-mini",
+  "framework": "function",
+  "scenarios": [
+    {
+      "name": "book round trip with confirmation",
+      "steps": [
+        {
+          "user_input": "Search flights from NYC to SFO",
+          "response": "Found flights",
+          "tool_calls": [
+            {
+              "name": "search_flights",
+              "arguments": {
+                "from": "NYC",
+                "to": "SFO"
+              },
+              "result": {
+                "flights": 3
+              },
+              "duration_ms": 10.0
+            }
+          ],
+          "tokens": {
+            "input": 10,
+            "output": 5
+          },
+          "cost_usd": 0.01,
+          "latency_ms": 100.0
+        }
+      ],
+      "total_cost_usd": 0.01,
+      "total_latency_ms": 100.0,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  agentcloudkelp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run AgentCloudKelp
+        uses: ./.github/agentcloudkelp-action
+        with:
+          contract: kelp.yaml
+          framework: http
+          model: gpt-4o-mini
+          fail_on: any
+          comment: true
+          python_version: "3.11"

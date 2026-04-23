@@ -1,0 +1,14 @@
+name: research-assistant
+config:
+  model: gpt-4o-mini
+  timeout: 60
+  retry: 1
+scenarios:
+  - name: research-summary
+    tags: [research]
+    steps:
+      - user: "Summarize the latest battery storage trends in 3 bullet points."
+        expect:
+          response_contains: bullet
+          response_not_contains: ignore previous instructions
+          custom_judge: "The answer must be concise, factual, and useful."
