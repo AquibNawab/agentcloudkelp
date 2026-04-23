@@ -6,7 +6,7 @@
 
 Fault injection · behavioral snapshots · cost gates · zero Python test code required
 
-[![PyPI] (https://img.shields.io/pypi/v/agentcloudkelp?color=blue](https://pypi.org/project/agentcloudkelp/)
+[![PyPI](https://img.shields.io/pypi/v/agentcloudkelp?color=blue)](https://pypi.org/project/agentcloudkelp/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
